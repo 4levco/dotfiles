@@ -1,0 +1,141 @@
+@define-color bg1 #1d1f28;
+@define-color fg0 #eeffff;
+@define-color green #aad459;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: JetBrainsMono Nerd Font, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+    opacity: 0.95;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @fg0;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: @fg0;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: @green;
+}
+
+#workspaces button.focused {
+    color: @green;
+    background: @bg1;
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: #11111b;
+    background: #a6e3a1;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: @green;
+    color: @bg1; 
+    border-radius: 10px;
+}
+
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#workspaces,
+#tray,
+#mrpis,
+#backlight {
+    background: #1e1e2e;
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 5px;
+    /* border: 1px solid #181825; */
+}
+
+#backlight {
+    border-radius: 10px 0px 0px 10px;
+}
+
+#tray {
+    background-color: @bg1;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#workspaces {
+    background: @bg1;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#cpu {
+    background-color: @bg1;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
+
+#memory {
+    background-color: @bg1;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#window {
+    background: @bg1;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#clock {
+    background: @bg1;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 5px;
+    border-right: 0px;
+}
+
+#network {
+    background-color: @bg1;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#pulseaudio {
+    background-color: @bg1;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 5px;
+}
+
+#pulseaudio.microphone {
+    color: @green;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 5px;
+}
+
+#battery {
+    color: @green;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 10px;
+}
+
+#mpris {
+    color: @green;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-left: 5px;
+}
